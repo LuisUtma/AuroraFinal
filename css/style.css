@@ -136,7 +136,7 @@ h6 {
 }
 
 #header #logo h1 a {
-  color: #ec6b54;
+  color: #d42c2c;
   line-height: 1;
   display: inline-block;
 }
@@ -190,7 +190,7 @@ h6 {
 }
 
 #intro .intro-content h2 {
-  color: #b34d4d;
+  color: #df1d1d;
   margin-bottom: 30px;
   font-size: 64px;
   font-weight: 700;
@@ -241,7 +241,7 @@ h6 {
 
 #intro #intro-carousel::before {
   content: '';
-  background-color: rgba(255, 255, 255, 0.7);
+ 
   position: absolute;
   height: 100%;
   width: 100%;
@@ -857,11 +857,26 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #contact {
   padding: 30px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+#google-map iframe {
+  width: 100%;
+}
+#google-map {
+  flex: 1;
+  margin-right: 20px; /* Espacio entre los elementos */
+  padding-bottom: 20px;
+}
+#contact .contact-info,
+#contact .form {
+  
+  margin-right: 20px;
+  
 }
 
 #contact .contact-info {
   margin-bottom: 20px;
-  text-align: center;
 }
 
 #contact .contact-info i {
@@ -893,15 +908,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #50d8af;
 }
 
-#contact .contact-address,
-#contact .contact-phone,
-#contact .contact-email {
-  margin-bottom: 20px;
-}
-
 #contact #google-map {
   height: 290px;
   margin-bottom: 20px;
+  order: 1; /* Cambiar el orden del mapa a la derecha */
 }
 
 #contact .form #sendmessage {
@@ -944,6 +954,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 0;
   box-shadow: none;
   font-size: 15px;
+  width: 100%; /* Ajustar el ancho de los campos de entrada */
 }
 
 #contact .form button[type="submit"] {
@@ -954,11 +965,25 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
   transition: 0.4s;
   cursor: pointer;
+  width: 100%; /* Ajustar el ancho del botón de envío */
 }
 
 #contact .form button[type="submit"]:hover {
   background: #2dc899;
 }
+
+@media (max-width: 768px) {
+  #contact .contact-info,
+  #contact .form {
+    flex: 100%;
+    margin-right: 0; /* Resetear el margen para el diseño de una sola columna en dispositivos móviles */
+  }
+
+  #contact #google-map {
+   /* Cambiar el orden del mapa de vuelta a la izquierda en dispositivos móviles */
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Footer
@@ -989,7 +1014,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   #contact .contact-address,
   #contact .contact-phone,
   #contact .contact-email {
-    padding: 20px 0;
+    padding: 30px  0;
+    
   }
 
   #contact .contact-phone {
@@ -1066,6 +1092,8 @@ body.mobile-nav-active #mobile-nav-toggle {
     padding-bottom: 15px;
   }
 
+
+
   #services .box h4,
   #services .box p {
     margin-left: 0;
@@ -1083,6 +1111,15 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 }
 
+
+.icon img{
+
+width: 90px;
+height: 90px;
+border-radius: 10px; 
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
 
 
 
@@ -1173,6 +1210,65 @@ body.mobile-nav-active #mobile-nav-toggle {
 .whatsapp-button {
   position: fixed;
   bottom: 20px;
-  left: 20px;
+  right: 20px;
   z-index: 1000; /* Asegúrate de que el botón no esté oculto por otros elementos */
+}
+
+
+
+.imgC img {
+  max-width: 100%; /* máximo ancho del contenedor */
+  max-height: 120%; /* máximo alto del contenedor */
+  height:auto; /* mantiene la relación de aspecto */
+}
+
+
+
+.floating-button {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background-color: #3b3b3b;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+
+}
+
+.floating-button:hover {
+  opacity: 1; /* Restaura la opacidad al pasar el cursor */
+}
+
+.floating-button img {
+  display: block;
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.floating-button span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+
+.floating-button {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    transform: translateY(-50%) scale(1.05);
+  }
+  100% {
+    transform: translateY(-50%) scale(1);
+  }
 }
