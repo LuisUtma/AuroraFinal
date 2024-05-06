@@ -126,6 +126,10 @@ h6 {
   box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
 }
 
+#header #logo {
+  float: left;
+}
+
 #header #logo h1 {
   font-size: 42px;
   margin: 0;
@@ -133,12 +137,14 @@ h6 {
   line-height: 1;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  display: inline-block; /* Hacer que el h1 sea un bloque en línea */
 }
 
 #header #logo h1 a {
   color: #d42c2c;
   line-height: 1;
   display: inline-block;
+  vertical-align: middle; 
 }
 
 #header #logo h1 a span {
@@ -148,7 +154,17 @@ h6 {
 #header #logo img {
   padding: 0;
   margin: 0;
+  height: 60px;
+  width: 100px;
+  vertical-align: middle;
 }
+
+#header #logo h1 {
+  margin-left: 20px; /* Espacio a la derecha del logo */
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Intro Section
@@ -158,7 +174,7 @@ h6 {
   width: 100%;
   height: 60vh;
   position: relative;
-  background: url("../img/intro-carousel/1.jpg") no-repeat;
+
   background-size: cover;
 }
 
@@ -190,15 +206,18 @@ h6 {
 }
 
 #intro .intro-content h2 {
+  
   color: #df1d1d;
   margin-bottom: 30px;
   font-size: 64px;
   font-weight: 700;
+
 }
 
 #intro .intro-content h2 span {
   color: #000000;
-  text-decoration: underline;
+  display: inline;
+ 
 }
 
 #intro .intro-content .btn-get-started,
@@ -252,15 +271,34 @@ h6 {
   z-index: 7;
 }
 
-#intro #intro-carousel .item {
-  width: 100%;
+#intro #intro-carousel img {
+
+  width:100%;
   height: 60vh;
+  height: 400px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   transition-property: opacity;
 }
+@keyframes kenburns {
+  0% {
+    transform: scale(1.5) translate(0, 0);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
 
+#intro-carousel .item img {
+  transform-origin: center ; /* Establece el punto de origen de la transformación en el centro de la imagen */
+  animation: kenburns 10s ease forwards; /* La animación avanza y se detiene en su estado final */
+  width: auto;
+  height: auto;
+}
+#intro-carousel .item {
+  overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -855,133 +893,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Contact Section
 --------------------------------*/
 
-#contact {
-  padding: 30px 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-#google-map iframe {
-  width: 100%;
-}
-#google-map {
-  flex: 1;
-  margin-right: 20px; /* Espacio entre los elementos */
-  padding-bottom: 20px;
-}
-#contact .contact-info,
-#contact .form {
-  
-  margin-right: 20px;
-  
-}
 
-#contact .contact-info {
-  margin-bottom: 20px;
-}
-
-#contact .contact-info i {
-  font-size: 48px;
-  display: inline-block;
-  margin-bottom: 10px;
-  color: #50d8af;
-}
-
-#contact .contact-info address,
-#contact .contact-info p {
-  margin-bottom: 0;
-  color: #000;
-}
-
-#contact .contact-info h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #999;
-}
-
-#contact .contact-info a {
-  color: #000;
-}
-
-#contact .contact-info a:hover {
-  color: #50d8af;
-}
-
-#contact #google-map {
-  height: 290px;
-  margin-bottom: 20px;
-  order: 1; /* Cambiar el orden del mapa a la derecha */
-}
-
-#contact .form #sendmessage {
-  color: #50d8af;
-  border: 1px solid #50d8af;
-  display: none;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-#contact .form #errormessage {
-  color: red;
-  display: none;
-  border: 1px solid red;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-#contact .form #sendmessage.show,
-#contact .form #errormessage.show,
-#contact .form .show {
-  display: block;
-}
-
-#contact .form .validation {
-  color: red;
-  display: none;
-  margin: 0 0 20px;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-#contact .form input,
-#contact .form textarea {
-  padding: 10px 14px;
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 15px;
-  width: 100%; /* Ajustar el ancho de los campos de entrada */
-}
-
-#contact .form button[type="submit"] {
-  background: #50d8af;
-  border: 0;
-  border-radius: 3px;
-  padding: 10px 30px;
-  color: #fff;
-  transition: 0.4s;
-  cursor: pointer;
-  width: 100%; /* Ajustar el ancho del botón de envío */
-}
-
-#contact .form button[type="submit"]:hover {
-  background: #2dc899;
-}
 
 @media (max-width: 768px) {
   #contact .contact-info,
   #contact .form {
-    flex: 100%;
+    flex: auto;
     margin-right: 0; /* Resetear el margen para el diseño de una sola columna en dispositivos móviles */
+    width: 200px;
   }
 
-  #contact #google-map {
-   /* Cambiar el orden del mapa de vuelta a la izquierda en dispositivos móviles */
-  }
+ 
 }
 
 
@@ -1014,14 +936,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   #contact .contact-address,
   #contact .contact-phone,
   #contact .contact-email {
-    padding: 30px  0;
+   
     
   }
 
-  #contact .contact-phone {
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
+  #contact .contact-address,
+  #contact .contact-phone,
+  #contact .contact-email {
+   
+    text-decoration: none;
   }
+
 }
 
 @media (min-width: 769px) {
@@ -1107,6 +1032,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 576px) {
   #contact #google-map {
+    
     margin-top: 20px;
   }
 }
@@ -1114,10 +1040,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .icon img{
 
-width: 90px;
-height: 90px;
+width: 120px;
+height: 120px;
 border-radius: 10px; 
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+margin-right: 5px;
 
 }
 
@@ -1131,6 +1058,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: #fff;
   transition: 0.4s;
   position: relative; /* Asegura que el botón se posicione respecto a esta caja */
+  text-align: justify;
 }
 
 #services .box:hover {
@@ -1210,7 +1138,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 .whatsapp-button {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 10px;
   z-index: 1000; /* Asegúrate de que el botón no esté oculto por otros elementos */
 }
 
@@ -1226,7 +1154,7 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 .floating-button {
   position: fixed;
-  right: 10px;
+  left: 10px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1000;
@@ -1271,4 +1199,126 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   100% {
     transform: translateY(-50%) scale(1);
   }
+}
+
+
+
+
+
+#contact {
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#google-map {
+  margin-left: auto;
+  padding-bottom: 20px;
+}
+#contact .contact-info,
+#contact .form {
+  width: 800px;
+  margin-right: auto;
+  margin-right: 20px;
+  
+}
+
+#contact .contact-info {
+
+}
+
+#contact .contact-info i {
+  font-size: 48px;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #50d8af;
+}
+
+#contact .contact-info address,
+#contact .contact-info p {
+  margin-bottom: 0;
+  color: #000;
+}
+
+#contact .contact-info h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #999;
+}
+
+#contact .contact-info a {
+  color: #000;
+}
+
+#contact .contact-info a:hover {
+  color: #50d8af;
+}
+.contact-email a {
+  font-size: 18px;
+  word-wrap: break-word; /* Rompe la palabra si es demasiado larga */
+  word-break: break-all; /* Rompe la palabra en cualquier punto */
+}
+
+#contact .form #sendmessage {
+  color: #50d8af;
+  border: 1px solid #50d8af;
+  display: none;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#contact .form #errormessage {
+  color: red;
+  display: none;
+  border: 1px solid red;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+#contact .form #sendmessage.show,
+#contact .form #errormessage.show,
+#contact .form .show {
+  display: block;
+}
+
+#contact .form .validation {
+  color: red;
+  display: none;
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+#contact .form input,
+#contact .form textarea {
+  padding: 10px 14px;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 15px;
+  width: 100%; /* Ajustar el ancho de los campos de entrada */
+}
+
+#contact .form button[type="submit"] {
+  background: #50d8af;
+  border: 0;
+  border-radius: 3px;
+  padding: 10px 30px;
+  color: #fff;
+  transition: 0.4s;
+  cursor: pointer;
+  width: 100%; /* Ajustar el ancho del botón de envío */
+}
+
+#contact .form button[type="submit"]:hover {
+  background: #2dc899;
+}
+
+.custom-file-input {
+  display: none;
 }
