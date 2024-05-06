@@ -1138,7 +1138,7 @@ margin-right: 5px;
 .whatsapp-button {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   z-index: 1000; /* Asegúrate de que el botón no esté oculto por otros elementos */
 }
 
@@ -1154,7 +1154,7 @@ margin-right: 5px;
 
 .floating-button {
   position: fixed;
-  right: 10px;
+  left: 10px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1000;
