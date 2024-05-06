@@ -131,7 +131,7 @@ h6 {
 }
 
 #header #logo h1 {
-  font-size: 42px;
+  font-size: 38px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -940,7 +940,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     
   }
 
-  #contact .contact-address,
+   #contact .contact-address,
   #contact .contact-phone,
   #contact .contact-email {
    
@@ -1138,7 +1138,7 @@ margin-right: 5px;
 .whatsapp-button {
   position: fixed;
   bottom: 20px;
-  left: 10px;
+  right: 20px;
   z-index: 1000; /* Asegúrate de que el botón no esté oculto por otros elementos */
 }
 
@@ -1154,7 +1154,7 @@ margin-right: 5px;
 
 .floating-button {
   position: fixed;
-  left: 10px;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1000;
@@ -1217,7 +1217,7 @@ margin-right: 5px;
 }
 #contact .contact-info,
 #contact .form {
-  width: 800px;
+  width: 600px;
   margin-right: auto;
   margin-right: 20px;
   
