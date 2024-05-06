@@ -27,7 +27,7 @@ const traducciones = {
         "Decoratives1": "Diseñamos y fabricamos tus artículos en 3D que pueden ser personalizados para decorar tu casa, negocio u oficina como: lámparas para techo, lámparas de litofania, macetas, floreros, portaplumas, artes para pared, esculturas abstractas, porta retratos personalizados, placas para escritorios y más.",
         "Decoratives": "Artículos decorativos",
         "Decoratives1": "Diseñamos y fabricamos tus artículos en 3D que pueden ser personalizados para decorar tu casa, negocio u oficina como: lámparas para techo, lámparas de litofania, macetas, floreros, portaplumas, artes para pared, esculturas abstractas, porta retratos personalizados, placas para escritorios y más.",
-       
+       "Impresion3d": "Tu impresión 3D en sólo 5 pasos",
         "ContactFm": "Contáctanos",
         "DireccionC":"Dirección",
         "Cotizar":"Cotizar Proyecto",
@@ -73,7 +73,7 @@ const traducciones = {
         "Decoratives1": "We design and manufacture your 3D articles that can be customized to decorate your home, business, or office such as: ceiling lamps, lithophane lamps, pots, vases, pen holders, wall art, abstract sculptures, personalized photo frames, desk plaques, and more.",
         "Decoratives": "Decorative items",
         "Decoratives1": "We design and manufacture your 3D articles that can be customized to decorate your home, business, or office such as: ceiling lamps, lithophane lamps, pots, vases, pen holders, wall art, abstract sculptures, personalized photo frames, desk plaques, and more.",
-       
+        "Impresion3d": "Your 3D printing in just 5 steps",
         "ContactFm": "Contact us",
         "DireccionC":"Address",
         "Cotizar":"Quote",
