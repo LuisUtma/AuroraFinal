@@ -4,10 +4,9 @@ const traducciones = {
         "Services": "Servicios",
         "Contact": "Contacto",
         "Idioma":"Cambiar Idioma",
-        "ifcan": "Si lo puedes",
-        "dreamit": "Soñar",
-        "create": "Lo puedes crear",
-        "dreamit":"soñar",
+        "ifcan": "Si lo puedes soñar lo puedes crear",
+      
+       
         "Who": "¿QUIENES SOMOS?",
         "Weare": "Somos una empresa que utilizamos tecnología aditiva FDM con termoplásticos de grado de producción para fabricar piezas resistentes, duraderas y de precisión para uso final y/o prototipados con impresión 3D con la más alta calidad, usando plásticos como: PLA, ABS, ASA, PETG, TPU, entre otros.",
         "Offer": "Ofrecemos modelado y fabricación de piezas de plástico con impresión 3D hechas a la medida para satisfacer las necesidades de las empresas de los sectores industrial, comercial y de servicios; así como clientes en general que requieren piezas personalizadas únicas.",
@@ -41,7 +40,15 @@ const traducciones = {
         "AddFile":"Adjuntar Archivo",
         "requirements":"Si el documento es mayor a 10 mb, madarlo directamente por el correo.",
         "attachments": "Escoger Archivo",
-        "sendmessageF": "Enviar Mensaje"
+        "sendmessageF": "Enviar Mensaje",
+        "CotizaF" : "Cotiza tu Proyecto",
+        "openModalBtn1": "Galeria",
+        "openModalBtn2": "Galeria",
+        "openModalBtn3": "Galeria",
+        "openModalBtn4": "Galeria",
+        "openModalBtn5": "Galeria",
+        "openModalBtn6": "Galeria",
+        
        
     
 
@@ -51,9 +58,8 @@ const traducciones = {
         "Services": "Services",
         "Contact": "Contact",
         "Idioma":"Change Languaje",
-        "ifcan": "If you can",
-        "create": "you can do it",
-        "dreamit":"Dream it",
+        "ifcan": "If you can dream it, you can create it",
+       
         "Who": "WHO ARE WE?",
         "Weare": "We are a company that uses FDM additive technology with production-grade thermoplastics to manufacture resistant, durable and precision parts for end use and/or prototyped with 3D printing with the highest quality, using plastics such as: PLA, ABS, ASA, PETG, TPU, among others.",
         "Offer": "We offer modeling and manufacturing of custom-made 3D printed plastic parts to meet the needs of companies in the industrial, commercial and service sectors; as well as general customers who require unique custom pieces.",
@@ -87,8 +93,15 @@ const traducciones = {
         "AddFile":"Add File",
         "requirements":"If the document is larger than 10 mb, send it directly by mail.",
         "attachments": "Choose File",
-        "sendmessageF": "Send Message"
-       
+        "sendmessageF": "Send Message",
+        "CotizaF" : "Quote your Proyect",
+        "openModalBtn1": "Galery",
+        "openModalBtn2": "Galery",
+        "openModalBtn3": "Galery",
+        "openModalBtn4": "Galery",
+        "openModalBtn5": "Galery",
+        "openModalBtn6": "Galery"
+
     
     }
 };

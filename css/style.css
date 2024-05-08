@@ -8,6 +8,7 @@ body {
   background: #fff;
   color: #444;
   font-family: "Open Sans", sans-serif;
+  display: inline-grid;
 }
 
 a {
@@ -118,7 +119,7 @@ h6 {
 --------------------------------------------------------------*/
 
 #header {
-  padding: 20px 0;
+  padding: 10px 0;
   height: 84px;
   transition: all 0.5s;
   z-index: 997;
@@ -128,19 +129,22 @@ h6 {
 
 #header #logo {
   float: left;
+  position: fixed; /* Añadir posición relativa para los elementos absolutos internos */
 }
 
 #header #logo h1 {
-  font-size: 38px;
-  margin: 0;
-  padding: 0;
+  
+  align-content: center;
+text-align: center;
   line-height: 1;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  display: inline-block; /* Hacer que el h1 sea un bloque en línea */
+  display:inline-block; /* Hacer que el h1 sea un bloque en línea */ 
+  /* Agregar espacio entre el encabezado y las palabras adicionales */
 }
 
 #header #logo h1 a {
+
   color: #d42c2c;
   line-height: 1;
   display: inline-block;
@@ -152,16 +156,26 @@ h6 {
 }
 
 #header #logo img {
-  padding: 0;
-  margin: 0;
+ 
   height: 60px;
   width: 100px;
   vertical-align: middle;
 }
 
-#header #logo h1 {
-  margin-left: 20px; /* Espacio a la derecha del logo */
+
+
+.slogan {
+  clear: both; /* Asegura que el eslogan se coloque debajo del logo */
+  text-align: center; /* Centra el eslogan horizontalmente */
 }
+
+.slogan h2,
+.slogan span {
+  display: block; /* Hace que cada parte del eslogan ocupe una línea separada */
+  margin: 5px 0; /* Espacio entre las partes del eslogan */
+}
+
+/* Estilos para las palabras adicionales */
 
 
 
@@ -172,8 +186,8 @@ h6 {
 
 #intro {
   width: 100%;
-  height: 60vh;
-  position: relative;
+  height: 100%;
+ 
 
   background-size: cover;
 }
@@ -246,7 +260,7 @@ h6 {
 
 #intro .intro-content .btn-projects {
   background: #50d8af;
-  border: 2px solid #50d8af;
+
 }
 
 #intro .intro-content .btn-projects:hover {
@@ -256,31 +270,21 @@ h6 {
 
 #intro #intro-carousel {
   z-index: 8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#intro #intro-carousel::before {
-  content: '';
- 
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 7;
+
+#intro-carousel {
+  display:inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#intro #intro-carousel img {
 
-  width:100%;
-  height: 60vh;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition-property: opacity;
-}
+
+
 @keyframes kenburns {
   0% {
     transform: scale(1.5) translate(0, 0);
@@ -293,17 +297,22 @@ h6 {
 #intro-carousel .item img {
   transform-origin: center ; /* Establece el punto de origen de la transformación en el centro de la imagen */
   animation: kenburns 10s ease forwards; /* La animación avanza y se detiene en su estado final */
-  width: auto;
-  height: auto;
+
 }
 #intro-carousel .item {
+  
   overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
+  width: 75%;
+  height: 500px;
+  text-align: center;
+  background-image: url('/img/portada.png');
+  background-size: cover; /* La imagen se ajustará para cubrir completamente el contenedor */
+  background-position: center; /* Centra la imagen horizontal y verticalmente */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  /* Ajusta la altura del contenedor para que coincida con la imagen si es necesario */
+ 
 }
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
 
-/* Nav Menu Essentials */
 
 .nav-menu,
 .nav-menu * {
@@ -545,6 +554,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-weight: 700;
   position: relative;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 .section-header h2::before {
@@ -553,7 +563,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: block;
   width: 50px;
   height: 3px;
-  background: #50d8af;
+ 
   bottom: 0;
   left: 0;
 }
@@ -933,9 +943,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media (min-width: 768px) {
-  #contact .contact-address,
-  #contact .contact-phone,
-  #contact .contact-email {
+ 
    
     
   }
@@ -947,7 +955,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     text-decoration: none;
   }
 
-}
+
 
 @media (min-width: 769px) {
   #call-to-action .cta-btn-container {
@@ -1013,7 +1021,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
   #services .box .icon {
     float: none;
-    text-align: center;
+    text-align: justify;
     padding-bottom: 15px;
   }
 
@@ -1022,7 +1030,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   #services .box h4,
   #services .box p {
     margin-left: 0;
-    text-align: center;
+    
   }
 
   #testimonials .testimonial-item {
@@ -1059,6 +1067,7 @@ margin-right: 5px;
   transition: 0.4s;
   position: relative; /* Asegura que el botón se posicione respecto a esta caja */
   text-align: justify;
+  
 }
 
 #services .box:hover {
@@ -1104,6 +1113,7 @@ margin-right: 5px;
   margin-left: 100px;
   margin-bottom: 0;
   line-height: 24px;
+  overflow: hidden;
 }
 
 /* Estilos para los botones */
@@ -1207,13 +1217,15 @@ margin-right: 5px;
 
 #contact {
 
+  padding: 30px 0;
   display: flex;
   flex-wrap: wrap;
 }
 
 #google-map {
-  margin-left: auto;
-  padding-bottom: 20px;
+ 
+ margin-top: auto;
+ margin-left: 70px;
 }
 #contact .contact-info,
 #contact .form {
@@ -1223,9 +1235,6 @@ margin-right: 5px;
   
 }
 
-#contact .contact-info {
-
-}
 
 #contact .contact-info i {
   font-size: 48px;
@@ -1242,7 +1251,8 @@ margin-right: 5px;
 
 #contact .contact-info h3 {
   font-size: 18px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 0px;
   font-weight: bold;
   text-transform: uppercase;
   color: #999;
@@ -1322,3 +1332,6 @@ margin-right: 5px;
 .custom-file-input {
   display: none;
 }
+
+
+
