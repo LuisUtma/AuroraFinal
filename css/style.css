@@ -130,6 +130,7 @@ h6 {
 #header #logo {
   float: left;
   position: fixed; /* Añadir posición relativa para los elementos absolutos internos */
+
 }
 
 #header #logo h1 {
@@ -159,7 +160,8 @@ text-align: center;
  
   height: 60px;
   width: 100px;
-  vertical-align: middle;
+ 
+  margin-bottom: 50px;
 }
 
 
@@ -544,7 +546,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 
 .section-header {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 .section-header h2 {
@@ -553,7 +555,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-transform: uppercase;
   font-weight: 700;
   position: relative;
-  padding-bottom: 20px;
+
   text-align: center;
 }
 
