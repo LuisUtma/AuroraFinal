@@ -585,6 +585,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #about .about-img img {
+  margin-top: 30px;
+  border-radius: 15px;
   margin-left: -15px;
   max-width: 100%;
 }
