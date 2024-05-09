@@ -302,12 +302,12 @@ text-align: center;
 
 }
 #intro-carousel .item {
-  
+  border-radius: 12px;
   overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
   width: 75%;
-  height: 500px;
+  height: 750px;
   text-align: center;
-  background-image: url('/img/portada.png');
+  background-image: url('/img/fotoreciente.jpg');
   background-size: cover; /* La imagen se ajustará para cubrir completamente el contenedor */
   background-position: center; /* Centra la imagen horizontal y verticalmente */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
