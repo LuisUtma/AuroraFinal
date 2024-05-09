@@ -579,10 +579,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 
 #about {
-  padding: 60px 0 30px 0;
+  padding: 30px 0 30px 0;
 }
 
 #about .about-img {
+  display:inline-block;
   overflow: hidden;
 }
 
@@ -1005,7 +1006,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   }
 
   #about .about-img {
-    height: auto;
+    height:max-content;
   }
 
   #about .about-img img {
@@ -1045,7 +1046,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media (max-width: 576px) {
   #contact #google-map {
     
-    margin-top: 20px;
+    margin-top: 0px;
   }
 }
 
